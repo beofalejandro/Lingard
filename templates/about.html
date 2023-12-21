@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acerca de | ESCALIA Site</title>
+    <link rel="stylesheet" href=" {{url_for('static', filename='about_stylesheet.css')}} " />
+    <link rel="stylesheet" href=" {{url_for('static', filename='general_stylesheet.css')}} " />
+    <link rel="Icon" href="library/logotype_resourses/ESCALIALogoCA.svg" />
+</head>
+<body>
+    <header id="header">
+        <a href="index.html">
+            <img src="library/logotype_resourses/ESCALIALogo.svg" class="logo" alt="" />
+        </a>
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+            <img src="library/logotype_resourses/others/menu.svg" class="menu-icono" alt="" />
+        </label>
+        <ul class="menu">
+            <li class="item">
+                <a class="link" href="index.html">Incio</a>
+            </li>
+            <li class="item">
+                <a class="link" href="proyects.html">Proyectos</a>
+            </li>
+            <li class="item">
+                <a class="link" href="institute.html">ITSOEH</a>
+            </li>
+            <li class="item">
+                <a class="link" href="laboratory.html">Lab</a>
+            </li>
+        </ul>
+    </header>
+    
+    <section class="about-container">
+        <div class="about-content">
+            <div class="h_a_container">
+                <div class="a_logo-container">
+                    <img src="library/pictures/cat_cards.jpg" class="logo-about" alt=""/>
+                </div>
+                <div class="me">
+                    <h2>Alejandro Barrientos Escalante (Student)</h2>
+                    <p>Este es mi portafolio web, donde se encontararan varios de mis proyectos y cosas relacionadas asi como parte de codigo que llego aprendiendo, ademas que aqui podras ver mi Curriculum Vitae por si te interesa saber mas sobre mi formacion academica y mis logos ademas de mis habilidades</p>
+                </div>
+            </div>
+            <div class="description">
+                <div class="media-container">
+                    <div class="media-links">
+                        <a href="https://www.facebook.com/AlejandroLMRY">
+                            <img src="library/logotype_resourses/others/facebook-logo.svg" class="link-logo" alt=""></a>
+                        <a href="https://www.instagram.com/alejandrolmry/">
+                            <img src="library/logotype_resourses/others/instagram-logo.svg" class="link-logo" alt=""></a>
+                        <a href="https://www.linkedin.com/in/alejandrolmry/">
+                            <img src="library/logotype_resourses/others/linkedin-logo.svg" class="link-logo" alt=""></a>
+                        <a href="https://github.com/AlejandroLMR/ESCALIA">
+                            <img src="library/logotype_resourses/others/github-logo.svg" class="link-logo" alt=""></a>
+                        <a href="">
+                            <img src="" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="curriculum">
+                    <h2>Curriculum Vitae</h2>
+                    <button class="button" onclick="printcv()">Imprimir</button>
+                    <table class="cv_table">
+                        <tr>
+                            <th>Nombre:</th>
+                            <th>Apellido Paterno:</th>
+                            <th>Apellido Materno:</th>
+                            <th>Edad:</th>
+                        </tr>
+                        <tr>
+                            <td>Alejandro</td>
+                            <td>Barrientos</td>
+                            <td>Escalante</td>
+                            <td>20 años</td>
+                        </tr>
+                        <tr>
+                            <th colspan="4">Descripción:</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Hola soy Alejandro y soy un estudiante del Instituto Tecnologico Superior del Occidente del Estado de Hidalgo (ITSOEH) mis principales habildades son el: Desarollo Web, La Programación, La Maquetación y Las Redes, no cuento con muchas certificaciones pero cuento con concocimientos necesarios en cada rama para resorlver problemas y adversidades</td>
+                        </tr>
+                        <tr>
+                            <th colspan="4">Certificaciones Personales:</th>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Certificacion Numero uno! se me olvido subirla XDN'T</td>
+                            <td><button>Ver</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Certificacion Numero dos! Ya ni me preguntes</td>
+                            <td><button>Ver</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Ya no hay mas! Solo es de relleno</td>
+                            <td><button>No ver</button></td>
+                        </tr>
+                        <tr>
+                            <th colspan="4">Formacion Academica:</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Ni me veas no fui a la escuela</th>
+                        </tr>
+                        <tr>
+                            <th colspan="4">Habilidades</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Soap</td>
+                        </tr>
+                        <tr>
+                            <th colspan="4">Mis Skills</th>
+                        </tr>
+                        <tr>
+                            <td colspan="4">Por ahora no tengo ninguna habilidad aprendida pero proximamente seran agregado algunas</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="group-b">
+            <small>&copy; 2023 <b>ESCALIA Software</b> - Todos los derechos Reservados</small>
+        </div>
+    </footer>
+
+    <script src="scripts/about.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

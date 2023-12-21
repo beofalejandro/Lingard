@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Century Gothic', 'Arial';
+    height: auto;
+    text-decoration: none;
+}
+
+.logo {
+    width: 130px;
+}
+
+header  {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+    padding: 0 5%;
+    height: 75px;
+    z-index: 1;
+}
+
+body {
+    height: 145vh;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+    transition: opacity 0.5s ease-in-out;
+}
+
+.content {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    padding: 1%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 1px;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 40px;
+}
+
+.link {
+    margin: 0 10px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.link:hover {
+    transition: 0.5s;
+}
+
+label {
+    cursor: pointer;
+    display: none;
+}
+
+.button{
+    background-color: #414141;
+    color: #fff;
+    margin: 5px;
+    border: 1px solid #252525;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.button:hover{
+    background-color: #EC0138;
+    color: #fff;
+    border: 1px solid #252525;
+    transition: 0.5s;
+}
+
+footer {
+    padding: 10px;
+    background-color: #252525; /* BETA CAN BE DELETED */
+}
+
+footer .group-a {
+    display: flex;
+    gap: 3px;
+    padding: 5px 0 5px 0;
+}
+
+footer .group-a .box-1 {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.foot-logo {
+    width: 150px;
+}
+
+footer .group-a .box-2 p{
+    padding: 15px 0 0 0;
+}
+
+footer .group-b{
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+
+footer .group-b small{
+    font-size: 16px;
+}
+
+@media screen and (max-width:800px){
+    .logo {
+        width: 110px;
+    }
+
+    .menu{
+        padding: 30px;
+        padding-bottom: 400px;
+    }
+
+    label{
+        display: initial;
+    }
+
+    .menu{
+        height: 1000%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #252525;
+        display: none;
+    }
+
+    .item{
+        text-align: center;
+        margin: 5px 30px 5px 30px;
+        border-radius: 3px;
+        padding: 8px 0 0 0;
+        height: 40px;
+    }
+
+    .item:hover {
+        background-color: #EC0138;
+    }
+
+    .link {
+        color: #fff;
+    }
+
+    .link:hover {
+        background-color: #EC0138;
+        color: #252525;
+    }
+
+    #menu:checked ~ .menu{ 
+        display: inline;
+    }
+
+    footer .group-a {
+        align-items: center;
+        justify-content: center;
+        display: inline;
+        bottom: 0;
+    }
+
+    footer .group-a .box-1 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    footer .foot-logo {
+        justify-content: center;
+    }
+}

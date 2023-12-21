@@ -1,0 +1,105 @@
+body {
+    background-image: linear-gradient(180deg,
+    #0000008c 0%,
+    #0000008c 100%),
+    url(../library/pictures/background/index_bg.jpg);
+    background-position: center;
+    background-color: #252525;
+    color: #fff;
+}
+
+.link {
+    color: #f2f2f2;
+}
+
+.link:hover {
+    color: #EC0138;
+}
+
+.content {
+    background-color: #252525;
+}
+
+.content h2{
+    text-align: center;
+}
+
+.welcome {
+    height: 500px;
+    color: #fff;
+}
+
+.not_welcome {
+    padding: 10px 0 0 0;
+}
+
+.welcome .welcome-container {
+    padding: 200px 0 0 0;
+    margin: 0 130px 0 130px;
+    text-align: center;
+}
+
+.welcome .welcome-container h1{
+    padding: 0 0 10px 0;
+    font-size: 30px;
+}
+
+.welcome .welcome-container h1:hover {
+    color: #EC0138;
+    transition: 0.5s;
+}
+
+.longest-cards-space {
+    background-color: #252525;
+}
+
+.longest-cards-space .longest-cards {
+    padding: 20px 20px 20px 20px;
+    margin: 20px 5% 20px 5%;
+    display: flex;
+    grid-gap: 5px;
+    background-color: #414141;
+    border-radius: 5px;
+}
+
+.longest-cards-space .longest-cards .box-1 {
+    width: 200px;
+    display: flex;
+}
+
+.longest-cards-space .longest-cards .longest-picture {
+    width: 200px;
+}
+
+.longest-cards-space .longest-cards .box-2 {
+    padding: 20px 0 0 20px;
+}
+
+.longest-cards-space .longest-cards .box-2 p {
+    padding: 10px 0 0 0;
+}
+
+@media screen and (max-width:800px){
+    .welcome .welcome-container {
+        padding: 290px 0px;
+        text-align: center;
+        margin: 0 15px 0 15px;
+    }
+
+    .cards-space .cards-container .card{
+        width: 250px;
+        background-color: #414141;
+        border-radius: 5px;
+        color: #fff;
+        margin: 5px;
+    }
+    
+    .longest-cards-space {
+        background-color: #252525;
+    }
+
+    .longest-cards-space .longest-cards .box-2 {
+        width: auto;
+        padding: 20px 0 0 0;
+    }
+}

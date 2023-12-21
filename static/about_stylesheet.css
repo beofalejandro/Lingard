@@ -1,0 +1,129 @@
+@keyframes w_multicolor {
+    0% {background-position: 0% 50%;}
+    25% {background-position: 50% 100%;}
+    50% {background-position: 100% 50%;}
+    75% {background-position: 50% 0%;}
+}
+
+body {
+    background-image: linear-gradient(180deg,
+    #0000008c 0%,
+    #0000008c 100%),
+    url(../library/pictures/background/about_bg.jpg);
+    background-position: center;
+    background-color: #252525;
+    color: #fff;
+}
+
+.link {
+    color: #f2f2f2;
+}
+
+.link:hover {
+    color: #EC0138;
+}
+
+.about-container {
+    background-color: #252525;
+    margin: 6%;
+}
+
+.about-content{
+    margin: 90px 35px 0 35px;
+    padding: 30px 0 30px 0;
+}
+
+.h_a_container {
+    display: flex;
+    grid-gap: 5px;
+}
+
+.a_logo-container {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.me {
+    padding: 30px 0 0 10px ;
+}
+
+.me p {
+    padding: 10px 0 0 0;
+}
+
+.logo-about {
+    width: 190px;
+}
+
+.description {
+    margin: 20px 0 0 0;
+}
+
+.media-container {
+    height: 40px;
+    margin: 15px 0 15px 0;
+    background-color: gray;
+    border-radius: 8px;
+    display: flex;
+}
+
+.media-container:hover {
+    background: linear-gradient(50deg, #f9ea20, #9e0f64);
+    background-size: 2200px 50px;
+    animation: w_multicolor 7s linear infinite;
+}
+
+.media-links {
+    padding: 5px 0 0 0;
+    margin: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cv_table {
+    text-align: center;
+    width: 100%;
+    background: linear-gradient(90deg, purple, orange);
+    background-size: 2200px 50px;
+    animation: w_multicolor 30s linear infinite;
+
+}
+
+.cv_table th {
+    background-color: #ffffff2d;
+    color: #000;
+    padding: 2px 0 7px 0;
+}
+
+@media print {
+
+}
+
+@media screen and (max-width:800px){
+
+    .about-container {
+        background-color: #252525;
+        height: 600px;
+        margin: 70px 6% 0 6%;
+    }
+
+    .a_logo-container {
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 30px 0;
+    }
+
+    .h_a_container {
+        display: inline-block;
+    }
+
+    .about-content{
+        margin: 15px 15px 0 15px;
+        padding: 30px 0 0 0;
+        text-align: center;
+    }
+}
