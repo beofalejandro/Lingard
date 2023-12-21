@@ -1,6 +1,5 @@
 from flask import Flask as fk, render_template as rt
 
-
 # Start Flask
 app = fk(__name__)
 
