@@ -1,4 +1,4 @@
-from flask import Flask as fk, render_template as rt
+from flask import Flask as fk, render_template as rt, request as rq
 from pytube import YouTube # Soon proyect
 
 # Method to pytube library dowloader
@@ -13,9 +13,20 @@ app = fk(__name__)
 def index():
     return rt('index.html')
 
-@app.route('/about') # Remember do this because home is already use
-def about():
-    return rt('about.html')
+@app.route('/calcular', methods=['POST'])
+def calculate():
+    number1 = float(rq.form['number1'])
+    number2 = float(rq.form['number2'])
+    operation = rq.form['operation']
+
+    if operation == 'suma':
+        result = number1 + number2
+    if operation == 'resta':
+        result = number1 - number2
+    else:
+        result = 'operacion no valida'
+
+    return rt('index.html', result=result)
 
 # Start the app
 if __name__ == '__main__':

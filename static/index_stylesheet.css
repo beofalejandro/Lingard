@@ -45,101 +45,13 @@ body {
   justify-content: center;
 }
 
-.cards-space h2 {
-  padding-bottom: 10px;
-  text-align: center;
-}
-
-.cards-container {
-  text-align: center;
-}
-
-.card {
-  margin: 15px;
-  padding: 0 0 10px 0;
-  width: 250px;
-  display: inline-block;
-  background-color: #181818;
-  border-radius: 4px;
-  text-align: center;
-  cursor: default;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-}
-
-.card:hover {
-  background-color: #a4031f;
-  transition: 0.3s;
-}
-
-.card p {
-  font-size: 15px;
-  padding: 7px;
-}
-
-.card .picture {
-  border-radius: 4px 4px 0 0;
-  width: 100%;
-}
-
-.longest-cards {
+.calculator {
+  margin: 30px;
   padding: 20px;
-  margin: 30px 5%;
-  display: flex;
-  grid-gap: 5px;
-  background-color: #181818;
-  border-radius: 5px;
-}
-
-.box-1 {
-  width: 200px;
-  display: flex;
-}
-
-.longest-picture {
-  width: 200px;
-}
-
-.box-2 {
-  padding: 20px 0 0 20px;
-}
-
-.box-2 button {
-  margin-top: 20px;
-}
-
-.box-2 p {
-  padding: 10px 0 0 0;
+  justify-content: center;
+  background-color: #a4031f;
 }
 
 @media screen and (max-width: 800px) {
-  .i_welcome .i_w_container {
-    padding: 220px 0 0 0;
-    margin: 0 30px;
-    text-align: center;
-    margin: 0 15px;
-  }
-
-  .card {
-    margin: 10px;
-  }
-
-  .cards-space .cards-container {
-    text-align: center;
-  }
-
-  .longest-cards {
-    margin: 10px 25px;
-    height: auto;
-    display: inline-block;
-  }
-
-  .box-1 {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .box-2 {
-    padding: 0;
-  }
+  
 }

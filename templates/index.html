@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -19,9 +19,6 @@
         </label>
         <ul class="menu">
             <li class="item">
-                <a class="link" href="https://alejandrolmr.github.io/ESCALIA/">ESCALIA</a>
-            </li>
-            <li class="item">
                 <a class="link" href="about.html">
                     <button class="header-link">Acerca</button></a>
             </li>
@@ -31,8 +28,7 @@
     <section class="i_welcome">
         <div class="i_w_container">
             <h1>Seccion Python</h1>
-            <p>
-                Binevenido a nuestro lugar de pruebas, actualmente nos encontramos trabajando con la tecnologia de
+            <p>Binevenido a nuestro lugar de pruebas, actualmente nos encontramos trabajando con la tecnologia de
                 python para la integracion a la web, creeremos que es un buen camino ya que varios de mis proyectos que
                 deseo hacer seran echos en este lenguaje y quiero que se puedan ejecutar desde aqui sin necesidad de
                 descargar aplicaciones sino todo ya migrado a la web, disfruta tu estancia aqui
@@ -43,70 +39,35 @@
     </section>
 
     <section class="content">
-        <h2>Prueba nuestros experimentos</h2>
+        <h2>PRUEBA LOS NUEVOS PROYECTOS</h2>
         <div class="longest-cards-space">
             <div class="longest-cards">
                 <div class="box-1">
-                    <img src="library/pictures/cat_cards.jpg" class="longest-picture" />
+                    <img src="" class="longest-picture" />
                 </div>
-                <div class="box-2">
-                    <h2>Proyecto 1: Descargar videos</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
-                        qui adipisci fugiat blanditiis enim, debitis ut at non libero
-                        reiciendis quidem ducimus temporibus porro. Earum quas voluptas
-                        blanditiis quod delectus.
-                    </p>
-                    <a href="about.html">
-                        <button class="button">Ejecutar</button>
-                    </a>
-                </div>
-            </div>
+                <h2>Calculadora de Python</h2>
+                <form action="/calcular" class="calculator" method="post" >
+                    <label for="number1">Numero 1:</label>
+                    <input type="text" name="number1" required>
 
-            <div class="longest-cards">
-                <div class="box-1">
-                    <img src="library/pictures/cat_cards.jpg" class="longest-picture" />
-                </div>
-                <div class="box-2">
-                    <h2>Explora mas a cerca de nosotros</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam
-                        qui adipisci fugiat blanditiis enim, debitis ut at non libero
-                        reiciendis quidem ducimus temporibus porro. Earum quas voluptas
-                        blanditiis quod delectus.
-                    </p>
-                    <a href="about.html">
-                        <button class="button">Conoce Mas...</button>
-                    </a>
-                </div>
+                    <label for="operation">Operacion :</label>
+                    <select name="operation" id="">
+                        <option value="suma">Suma de numeros</option>
+                        <option value="resta">resta de numeros</option>
+                    </select>
+
+                    <label for="number2">Numero 2:</label>
+                    <input type="text" name="number2" required>
+
+                    <button type="submit">calcular</button>
+                </form>
+
+                {% if result %}
+                    <p>El resultado es {{ result }}</p>
+                {% endif %}
             </div>
         </div>
     </section>
-
-    <footer>
-        <div class="group-a">
-            <div class="box-1">
-                <figure>
-                    <a href="#">
-                        <img class="foot-logo" src="library/logotype_resourses/ESCALIALogo.svg" alt="ESCALIA Logo" />
-                    </a>
-                </figure>
-            </div>
-            <div class="box-2">
-                <h2>CV: Alejandro Barrientos Escalante</h2>
-                <p>
-                    Esta es una pagina web desarrollada por mi con el fin de usarlo como
-                    portafolio por lo que solo incluira mis proyectos y algunos manuales
-                    que inclusive les serviran para comprender mejor, Solo para fines
-                    educativos
-                </p>
-            </div>
-        </div>
-        <div class="group-b">
-            <small>&copy; 2023 <b>ESCALIA Software</b> - Todos los derechos
-                Reservados</small>
-        </div>
-    </footer>
 
     <script src="scripts/main.js"></script>
 </body>
