@@ -40,18 +40,37 @@
 
     <section class="content">
         <h2>PRUEBA LOS NUEVOS PROYECTOS</h2>
-        <div class="longest-cards-space">
-            <div class="longest-cards">
-                <div class="box-1">
-                    <img src="" class="longest-picture" />
-                </div>
+        <div class="project-container">
+            <div class="project-content">
+                <h2>Descargador de Videos</h2>
+                <form action="/download" method="post">
+                    <p>Inserta el link de video y selecciona sus calidad</p>
+                    <label for="url_link">Inserta el link del Video:</label>
+                    <input type="text" name="url_link" required>
+
+                    <label for="video_quality">Calidad de Video:</label>
+                    <select name="video_quality">
+                        <option value="144p">144p</option>
+                        <option value="280p">280p</option>
+                        <option value="360p">360p</option>
+                        <option value="480p">480p</option>
+                        <option value="720p">720p</option>
+                        <option value="1080p">1080p</option>
+                    </select>
+
+                    <button type="submit" class="button">Descargar</button>
+                </form>
+            </div>
+        </div>
+        <div class="project-container">
+            <div class="project-content">
                 <h2>Calculadora de Python</h2>
-                <form action="/calcular" class="calculator" method="post" >
+                <form action="/calculate" class="calculator" method="POST" >
                     <label for="number1">Numero 1:</label>
                     <input type="text" name="number1" required>
 
                     <label for="operation">Operacion :</label>
-                    <select name="operation" id="">
+                    <select name="operation">
                         <option value="suma">Suma de numeros</option>
                         <option value="resta">resta de numeros</option>
                     </select>
@@ -59,7 +78,7 @@
                     <label for="number2">Numero 2:</label>
                     <input type="text" name="number2" required>
 
-                    <button type="submit">calcular</button>
+                    <button type="submit" class="button">calcular</button>
                 </form>
 
                 {% if result %}

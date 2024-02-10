@@ -1,8 +1,6 @@
 from flask import Flask as fk, render_template as rt, request as rq
-from pytube import YouTube # Soon proyect
-
-# Method to pytube library dowloader
-# def downloader:
+from pytube import YouTube
+import os
 
 # Start Flask
 app = fk(__name__)
@@ -13,7 +11,27 @@ app = fk(__name__)
 def index():
     return rt('index.html')
 
-@app.route('/calcular', methods=['POST'])
+# DOWNLOADER
+@app.route('/download', methods=['POST'])
+def dowloader():
+    url_link = str(rq.form['url_link'])
+    video_quality = str(rq.form['video_quality'])
+
+    try:
+        # Set connection with youtube with get a video link
+        yt = YouTube(url_link)
+        stream = yt.streams.filter(res = video_quality).first()
+
+        # Download in especific directory
+        os.path.join('Downloads', f'{yt.title}.mp4')
+        stream.download(output_path='Downloads')
+
+        return rt('index.html')
+    except Exception as e:
+        return rt('index.html')
+
+# CALCULATOR
+@app.route('/calculate', methods=['POST'])
 def calculate():
     number1 = float(rq.form['number1'])
     number2 = float(rq.form['number2'])
@@ -21,7 +39,7 @@ def calculate():
 
     if operation == 'suma':
         result = number1 + number2
-    if operation == 'resta':
+    elif operation == 'resta':
         result = number1 - number2
     else:
         result = 'operacion no valida'
