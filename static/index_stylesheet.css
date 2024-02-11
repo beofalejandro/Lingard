@@ -19,7 +19,7 @@ body {
   padding: 15px 0;
 }
 
-.i_welcome {
+.index_welcome {
   height: 600px;
 }
 
@@ -48,14 +48,32 @@ body {
 
 .project-container {
   margin: 30px;
-  padding: 20px;
-  text-align: center;
+  padding: 30px 20px;
   border-radius: 7px;
   background-color: #151515;
 }
 
+.project-content {
+  display: flex;
+  gap: 5px;
+}
+
 .project-content h2{
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.project-description {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-conatiner {
+  width: 50%;
+}
+
+.form-container form {
+  display: flex;
 }
 
 @media screen and (max-width: 800px) {

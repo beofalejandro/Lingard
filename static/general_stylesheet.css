@@ -18,6 +18,7 @@ header {
   top: 0;
   left: 0;
   display: flex;
+  background-color: #212121;
   justify-content: space-between;
   align-items: center;
   background-size: cover;
@@ -95,9 +96,18 @@ label {
 input {
   background-color: #212121;
   color: #fff;
-  padding: 10px;
-  height: 30px;
+  padding: 15px 5px;
+  height: 25px;
   outline: none;
+  border: 1px solid #606060;
+  border-radius: 5px;
+}
+
+select {
+  background-color: #151515;
+  color: #fff;
+  padding: 0 15px;
+  height: 30px;
   border: none;
 }
 
