@@ -1,21 +1,21 @@
 body {
   background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%),
-  url(../library/pictures/index/index_bg.jpg);
+  url(../static/index/index_bg.jpg);
   background-position: center;
   color: #fff;
 }
 
 .header-link {
-  color: #fff;
+  color: #000;
 }
 
 .header-link:hover {
-  color: #a4031f;
+  color: #EE2E31;
 }
 
 .content {
   text-align: center;
-  background-color: #212121;
+  background-color: #EEEEEE;
   padding: 15px 0;
 }
 
@@ -24,6 +24,7 @@ body {
 }
 
 .i_w_container {
+  color: #FFF;
   padding: 250px 0 0 0;
   margin: 0 100px;
   text-align: center;
@@ -40,17 +41,19 @@ body {
 }
 
 .i_w_controls {
-  padding: 10px 0 0 0;
+  padding-top: 15px;
   display: flex;
   text-align: center;
   justify-content: center;
 }
 
+
 .project-container {
   margin: 30px;
-  padding: 30px 20px;
+  padding: 20px 20px;
   border-radius: 7px;
-  background-color: #151515;
+  background-color: #BB0A21;
+  color: #FFF;
 }
 
 .project-content {
@@ -63,19 +66,65 @@ body {
 }
 
 .project-description {
+  padding: 20px 0;
   width: 50%;
   align-items: center;
   justify-content: center;
 }
 
-.form-conatiner {
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+  background-color: #EEEEEE;
+  border-radius: 7px;
   width: 50%;
 }
 
 .form-container form {
-  display: flex;
+  justify-content: center;
+}
+
+.form-container label{
+  color: #000;
+}
+
+.form-container input {
+  background-color: #EEEEEE;
+  color: #000;
+  border: 1px solid #404040;
+  border-radius: 5px;
+}
+
+#url_link {
+  width: 70%;
+}
+
+.form-container select {
+  background-color: #EEEEEE;
+  color: #000;
 }
 
 @media screen and (max-width: 800px) {
+  .index_welcome {
+    height: auto;
+  }
+
+  .i_w_container {
+    padding: 20% 0;
+    margin: 0 10px;
+  }
+
+  .project-content {
+    display: inline;
+    gap: 5px;
+  }
+
+  .project-description {
+    width: 100%;
+  }
   
+  .form-container {
+    width: 100%;
+  }
 }

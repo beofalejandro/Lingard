@@ -7,19 +7,19 @@
     <title>Pagina Principal | ESCALIA with Python × HTML5</title>
     <link rel="stylesheet" href=" {{url_for('static', filename='index_stylesheet.css')}} " />
     <link rel="stylesheet" href=" {{url_for('static', filename='general_stylesheet.css')}} " />
-    <link rel="Icon" href="library/logotype_resourses/ESCALIALogoCA.svg" />
+    <link rel="Icon" href="../static/ESCALIA/ESCALIALogoCA.svg" />
 </head>
 
 <body>
     <header id="header">
-        <img src="library/logotype_resourses/ESCALIALogo.svg" class="logo" alt="" />
+        <img src="../static/ESCALIA/ESCALIALogo.svg" class="logo" alt="" />
         <input type="checkbox" id="menu" />
         <label for="menu">
             <img src="library/logotype_resourses/others/menu.svg" class="menu-icono" alt="" />
         </label>
         <ul class="menu">
             <li class="item">
-                <a class="link" href="about.html">
+                <a class="link" href="/about">
                     <button class="header-link">Acerca</button></a>
             </li>
         </ul>
@@ -34,12 +34,19 @@
                 descargar aplicaciones sino todo ya migrado a la web, disfruta tu estancia aqui
             </p>
             <p class="not_welcome">¿Te perdiste?</p>
-            <button class="button"> Volver a ESCALIA Site</button>
+
+            <div class="i_w_controls">
+                <a href="https://beofalejandro.github.io/ESCALIA/">
+                    <button class="button"> Volver a ESCALIA Site</button>
+                </a>
+            </div>
         </div>
     </section>
 
     <section class="content">
         <h2>PRUEBA LOS NUEVOS PROYECTOS</h2>
+
+        <!-- VIDEO DOWNLOADER -->
         <div class="project-container">
             <div class="project-content">
                 <div class="project-description">
@@ -50,24 +57,54 @@
                 </div>
                 <div class="form-container">
                     <form action="/download" method="post">
-                        <label for="url_link">Inserta el link del Video:</label>
-                        <input type="text" name="url_link" required>
+                        <div>
+                            <label for="url_link">Inserta el link del Video:</label>
+                            <input type="text" name="url_link" id="url_link" required>
+                        </div>
+                        <div>
+                            <label for="video_quality">Calidad de Video:</label>
+                            <select name="video_quality">
+                                <option value="144p">144p</option>
+                                <option value="280p">280p</option>
+                                <option value="360p">360p</option>
+                                <option value="480p">480p</option>
+                                <option value="720p">720p</option>
+                                <option value="1080p">1080p (without audio)</option>
+                            </select>
+                        </div>
 
-                        <label for="video_quality">Calidad de Video:</label>
-                        <select name="video_quality">
-                            <option value="144p">144p</option>
-                            <option value="280p">280p</option>
-                            <option value="360p">360p</option>
-                            <option value="480p">480p</option>
-                            <option value="720p">720p</option>
-                            <option value="1080p">1080p</option>
-                        </select>
+                        <div class="proj-controls">
+                            <button type="submit" class="button">Descargar</button>
+                        </div>
+                    </form>
 
-                        <button type="submit" class="button">Descargar</button>
+                    {% if result_download %}
+                    <p style="color: #000; padding: 10px;">{{ result_download }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+
+        <!-- LABORATORY -->
+        <div class="project-container">
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>Epacio de laboratorio --- Solo acceso anticipado</h2>
+                    <p>So</p>
+                </div>
+                <div class="form-container">
+                    <form action="/laboratory" method="POST">
+                        <button type="submit" class="button">Probar</button>
+
+                        {% if output_laboratory %}
+                        <p style="color: #000; padding: 10px;">{{ output_laboratory }}</p>
+                        {% endif %}
                     </form>
                 </div>
             </div>
         </div>
+
         <div class="project-container">
             <div class="project-content">
                 <div class="project-description">
@@ -77,30 +114,36 @@
                 </div>
                 <div class="form-container">
                     <form action="/calculate" method="POST">
-                        <label for="number1">Numero 1:</label>
-                        <input type="text" name="number1" required>
+                        <div>
+                            <label for="number1">Numero 1:</label>
+                            <input type="text" name="number1" required>
+                        </div>
+                        <div>
+                            <label for="number2">Numero 2:</label>
+                            <input type="text" name="number2" required>
+                        </div>
 
                         <label for="operation">Operacion :</label>
                         <select name="operation">
                             <option value="suma">Suma</option>
                             <option value="resta">Resta</option>
+                            <option value="multiplicacion">Multiplicacion</option>
                         </select>
 
-                        <label for="number2">Numero 2:</label>
-                        <input type="text" name="number2" required>
-
-                        <button type="submit" class="button">calcular</button>
+                        <div class="proj-controls">
+                            <button type="submit" class="button">calcular</button>
+                        </div>
                     </form>
 
-                    {% if result %}
-                    <p>El resultado es {{ result }}</p>
+                    {% if result_equal %}
+                    <p style="color: #000; padding: 10px;">{{ result_equal }}</p>
                     {% endif %}
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="scripts/main.js"></script>
+    <script src="{{ url_for('static', filename='../static/scripts/main.js') }}"></script>
 </body>
 
 </html>

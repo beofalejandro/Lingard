@@ -9,7 +9,7 @@
 
 /* --- HEADER STYLES --- */
 .logo {
-  width: 130px;
+  width: 120px;
 }
 
 header {
@@ -18,17 +18,17 @@ header {
   top: 0;
   left: 0;
   display: flex;
-  background-color: #212121;
   justify-content: space-between;
   align-items: center;
   background-size: cover;
   padding: 0 4%;
-  height: 70px;
+  height: 55px;
   z-index: 1;
 }
 
 /* --- BODY STYLES --- */
 body {
+  color: #000;
   height: 145vh;
   position: relative;
   background-size: cover;
@@ -70,15 +70,15 @@ body {
   transition: 0.4s;
 }
 
-label {
+.header label {
   cursor: pointer;
   display: none;
 }
 
 .button {
-  background-color: #a4031f;
-  color: #fff;
-  margin: 3px;
+  background-color: #eeeeee;
+  color: #000;
+  margin: 0 3px;
   cursor: pointer;
   border: 1px solid transparent;
   font-size: 14px;
@@ -87,25 +87,22 @@ label {
 }
 
 .button:hover {
-  background-color: #e83151;
-  color: #000;
+  background-color: #151515;
+  color: #fff;
   border: 1px solid transparent;
   transition: 0.5s;
 }
 
 input {
-  background-color: #212121;
-  color: #fff;
-  padding: 15px 5px;
-  height: 25px;
+  padding: 5px;
+  margin: 0 3px;
+  height: 30px;
   outline: none;
   border: 1px solid #606060;
-  border-radius: 5px;
+  border-radius: 0;
 }
 
 select {
-  background-color: #151515;
-  color: #fff;
   padding: 0 15px;
   height: 30px;
   border: none;

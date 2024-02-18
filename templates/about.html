@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Me</title>
+    <link rel="stylesheet" href=" {{url_for('static', filename='about_stylesheet.css')}} " />
+    <link rel="stylesheet" href=" {{url_for('static', filename='general_stylesheet.css')}} " />
 </head>
+
 <body>
-    
+    <main class="credits-conatiner">
+        <div class="title">
+            <h1>One Life, One Dream</h1>
+        </div>
+        <div class="credits-content">
+            <div class="escalia-credits">
+                <h2 id="tx_created-by">CREADO POR</h2>
+                <h2 id="tx_escalia">ESCALIA</h2>
+            </div>
+            <div class="alejandro-credits">
+                <h3 id="tx_alejandro">CV: Alejandro Barrientos Escalante</h3>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
