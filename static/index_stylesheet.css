@@ -1,12 +1,13 @@
 body {
-  background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%),
+  background-image: linear-gradient(180deg, #000000a1, #000000a1 ),
   url(../static/index/index_bg.jpg);
   background-position: center;
+  background-color: #212121;
   color: #fff;
 }
 
 .header-link {
-  color: #000;
+  color: #fff;
 }
 
 .header-link:hover {
@@ -15,7 +16,7 @@ body {
 
 .content {
   text-align: center;
-  background-color: #EEEEEE;
+  background-color: #151515;
   padding: 15px 0;
 }
 
@@ -24,36 +25,49 @@ body {
 }
 
 .i_w_container {
-  color: #FFF;
+  color: #fff;
   padding: 250px 0 0 0;
   margin: 0 100px;
   text-align: center;
 }
 
-.w_content h1 {
-  padding: 0 0 5px 0;
+.i_w_container h1 {
+  padding: 0 0 10px 0;
   font-size: 34px;
 }
 
-.w_content h1:hover {
-  color: #a4031f;
+.i_w_container h1:hover {
+  color: #e4003525;
   transition: 0.5s;
 }
 
-.i_w_controls {
-  padding-top: 15px;
+.introduction-to-escalia {
+  margin: 2%;
+  padding: 1%;
   display: flex;
-  text-align: center;
-  justify-content: center;
+  gap: 10px;
 }
 
+.into-picture {
+  width: 60%;
+}
+
+.into-description {
+  width: 40%;
+  padding: 6% 0;
+  background-image: url(../static/ESCALIA/ESCALIALogoCA-index.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 600px 300px;
+}
 
 .project-container {
   margin: 30px;
-  padding: 20px 20px;
+  padding: 2%;
   border-radius: 7px;
-  background-color: #BB0A21;
+  background-color: #1B2A41;
   color: #FFF;
+  border: 1px solid #F2BEFC;
 }
 
 .project-content {
@@ -75,8 +89,8 @@ body {
 .form-container {
   display: flex;
   justify-content: center;
-  padding: 3px;
-  background-color: #EEEEEE;
+  padding: 1%;
+  background-color: #151515;
   border-radius: 7px;
   width: 50%;
 }
@@ -86,12 +100,16 @@ body {
 }
 
 .form-container label{
-  color: #000;
+  color: #fff;
+}
+
+form > div {
+  margin: 10px 0;
 }
 
 .form-container input {
-  background-color: #EEEEEE;
-  color: #000;
+  background-color: #151515;
+  color: #fff;
   border: 1px solid #404040;
   border-radius: 5px;
 }
@@ -101,8 +119,12 @@ body {
 }
 
 .form-container select {
-  background-color: #EEEEEE;
-  color: #000;
+  background-color: #151515;
+  color: #fff;
+}
+
+.output {
+  color: #fff;
 }
 
 @media screen and (max-width: 800px) {

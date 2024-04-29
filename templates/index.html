@@ -20,7 +20,7 @@
         <ul class="menu">
             <li class="item">
                 <a class="link" href="/about">
-                    <button class="header-link">Acerca</button></a>
+                    <button class="header-link" id="header-link">ACERCA</button></a>
             </li>
         </ul>
     </header>
@@ -28,24 +28,27 @@
     <section class="index_welcome">
         <div class="i_w_container">
             <h1>Seccion Python</h1>
-            <p>Binevenido a nuestro lugar de pruebas, actualmente nos encontramos trabajando con la tecnologia de
+            <p>Bienvenido a nuestro lugar de pruebas, actualmente nos encontramos trabajando con la tecnologia de
                 python para la integracion a la web, creeremos que es un buen camino ya que varios de mis proyectos que
                 deseo hacer seran echos en este lenguaje y quiero que se puedan ejecutar desde aqui sin necesidad de
                 descargar aplicaciones sino todo ya migrado a la web, disfruta tu estancia aqui
             </p>
-            <p class="not_welcome">¿Te perdiste?</p>
 
-            <div class="i_w_controls">
-                <a href="https://beofalejandro.github.io/ESCALIA/">
-                    <button class="button"> Volver a ESCALIA Site</button>
-                </a>
-            </div>
         </div>
     </section>
 
     <section class="content">
-        <h2>PRUEBA LOS NUEVOS PROYECTOS</h2>
+        <div class="introduction-to-escalia">
+            <div class="into-picture">
 
+            </div>
+            <div class="into-description">
+                <h2>¡Mas acerca de mi!</h2>
+                <p>Conoce mi pagina web estatica</p>
+            </div>
+        </div>
+
+        <h2>PRUEBA LOS NUEVOS PROYECTOS</h2>
         <!-- VIDEO DOWNLOADER -->
         <div class="project-container">
             <div class="project-content">
@@ -77,34 +80,16 @@
                             <button type="submit" class="button">Descargar</button>
                         </div>
                     </form>
-
+                </div>
+                <div class="proj-output">
                     {% if result_download %}
-                    <p style="color: #000; padding: 10px;">{{ result_download }}</p>
+                    <p class="output">{{ result_download }}</p>
                     {% endif %}
                 </div>
             </div>
         </div>
 
-
-        <!-- LABORATORY -->
-        <div class="project-container">
-            <div class="project-content">
-                <div class="project-description">
-                    <h2>Epacio de laboratorio --- Solo acceso anticipado</h2>
-                    <p>So</p>
-                </div>
-                <div class="form-container">
-                    <form action="/laboratory" method="POST">
-                        <button type="submit" class="button">Probar</button>
-
-                        {% if output_laboratory %}
-                        <p style="color: #000; padding: 10px;">{{ output_laboratory }}</p>
-                        {% endif %}
-                    </form>
-                </div>
-            </div>
-        </div>
-
+        <!-- CALCULATOR -->
         <div class="project-container">
             <div class="project-content">
                 <div class="project-description">
@@ -127,7 +112,8 @@
                         <select name="operation">
                             <option value="suma">Suma</option>
                             <option value="resta">Resta</option>
-                            <option value="multiplicacion">Multiplicacion</option>
+                            <option value="multiplicacion">Multiplicación</option>
+                            <option value="division">División</option>
                         </select>
 
                         <div class="proj-controls">
@@ -136,12 +122,33 @@
                     </form>
 
                     {% if result_equal %}
-                    <p style="color: #000; padding: 10px;">{{ result_equal }}</p>
+                    <p class="output">{{ result_equal }}</p>
                     {% endif %}
                 </div>
             </div>
         </div>
+
+        <!-- LABORATORY -->
+        <div class="project-container">
+            <div class="project-content">
+                <div class="project-description">
+                    <h2>Espacio de laboratorio --- Solo acceso anticipado</h2>
+                    <p>So</p>
+                </div>
+                <div class="form-container">
+                    <form action="/laboratory" method="POST">
+                        <button type="submit" class="button">Probar</button>
+
+                        {% if output_laboratory %}
+                        <p class="output">{{ output_laboratory }}</p>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
+
+    
 
     <script src="{{ url_for('static', filename='../static/scripts/main.js') }}"></script>
 </body>

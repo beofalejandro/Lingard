@@ -52,6 +52,8 @@ def calculate():
         result = number1 - number2
     elif operation == 'multiplicacion':
         result = number1 * number2
+    elif operation == 'division':
+        result = number1 / number2
     else:
         result = 'operacion no valida'
 

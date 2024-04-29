@@ -1,7 +1,3 @@
-:root {
-  --backcgorund-color: # ;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -28,11 +24,12 @@ header {
   padding: 0 4%;
   height: 55px;
   z-index: 1;
+  transition: 0.5s all;
 }
 
 /* --- BODY STYLES --- */
 body {
-  color: #000;
+  color: #FFF;
   height: 145vh;
   position: relative;
   background-size: cover;
@@ -80,8 +77,8 @@ body {
 }
 
 .button {
-  background-color: #eeeeee;
-  color: #000;
+  background-color: #1B2A41;
+  color: #fff;
   margin: 0 3px;
   cursor: pointer;
   border: 1px solid transparent;
@@ -91,8 +88,8 @@ body {
 }
 
 .button:hover {
-  background-color: #151515;
-  color: #fff;
+  background-color: #F2BEFC;
+  color: #000;
   border: 1px solid transparent;
   transition: 0.5s;
 }
