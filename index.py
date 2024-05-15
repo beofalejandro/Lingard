@@ -1,6 +1,7 @@
 from flask import Flask as fk, render_template as rt, request as rq
 from pytube import YouTube
 import os
+import laboratory as lab
 
 # Start Flask
 app = fk(__name__)
@@ -62,13 +63,29 @@ def calculate():
 # My Laboratory 
 @app.route('/laboratory', methods=['POST'] )
 def laboratory():
-    text = 'XDNT'
-
-    if "free" in text:
-        print("Yes, 'free' is present.")
+    output = lab.laboratory_console()
 
     return rt('index.html',
-            output_laboratory = text)
+            output_laboratory = output)
+
+@app.route('/laboratory2', methods=['POST'])
+def laboratory2():
+    number1 = float(rq.form['number1'])
+    number2 = float(rq.form['number2'])
+    operation = rq.form['operation']
+
+    if operation == 'suma':
+        result = lab.suma(number1, number2)
+    elif operation == 'resta':
+        result = lab.resta(number1, number2)
+    elif operation == 'multiplicacion':
+        result = lab.multiplicacion(number1, number2)
+    elif operation == 'division':
+        result = lab.division(number1, number2)
+    else:
+        result = 'operacion no valida'
+
+    return rt('index.html', result_equal = result)
 
 # Start the app
 if __name__ == '__main__':

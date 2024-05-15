@@ -22,7 +22,7 @@ header {
   align-items: center;
   background-size: cover;
   padding: 0 4%;
-  height: 55px;
+  height: 60px;
   z-index: 1;
   transition: 0.5s all;
 }
@@ -49,6 +49,18 @@ body {
   grid-auto-columns: max-content;
   gap: 1px;
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background-color: #151515;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #F2BEFC;
+}
+
 
 #menu {
   display: none;
@@ -112,7 +124,7 @@ select {
 /* --- FOOTER ATRIBUTES --- */
 footer {
   padding: 8px 20px;
-  background-color: #212121; /* BETA CAN BE DELETED */
+  background-color: #151515; /* BETA CAN BE DELETED */
 }
 
 footer .about-me {

@@ -35,12 +35,6 @@ body {
   padding: 0 0 10px 0;
   font-size: 34px;
 }
-
-.i_w_container h1:hover {
-  color: #e4003525;
-  transition: 0.5s;
-}
-
 .introduction-to-escalia {
   margin: 2%;
   padding: 1%;
@@ -48,8 +42,16 @@ body {
   gap: 10px;
 }
 
-.into-picture {
+.into-title {
   width: 60%;
+  font-size: 28px;
+  text-align: center;
+  align-content: center;
+  background: linear-gradient(120deg, #e979ff, rgb(117, 228, 195));
+  background-size: 700px 100px;
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .into-description {
@@ -135,6 +137,18 @@ form > div {
   .i_w_container {
     padding: 20% 0;
     margin: 0 10px;
+  }
+
+  .introduction-to-escalia {
+    display: inline;
+  }
+
+  .into-title {
+    width: 100%;
+  }
+  
+  .into-description {
+    width: 100%;
   }
 
   .project-content {
