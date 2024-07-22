@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina Principal | ESCALIA with Python × HTML5</title>
+    <link rel="stylesheet" href=" {{url_for('static', filename='index_stylesheet.css')}} " />
+    <link rel="stylesheet" href=" {{url_for('static', filename='general_stylesheet.css')}} " />
+    <link rel="Icon" href="../static/ESCALIA/ESCALIALogoCA.svg" />
+</head>
+
+<body>
+    <header id="header">
+        <img src="../static/ESCALIA/ESCALIALogo.svg" class="logo" alt="" />
+        <input type="checkbox" id="menu" />
+        <label for="menu">
+            <img src="library/logotype_resourses/others/menu.svg" class="menu-icono" alt="" />
+        </label>
+        <ul class="menu">
+            <li class="item">
+                <a class="link" href="/about">
+                    <button class="header-link" id="header-link">ACERCA</button></a>
+            </li>
+        </ul>
+    </header>
+
+    <section class="index_welcome">
+        <div class="i_w_container">
+            <h1>Seccion Python</h1>
+            <p>Bienvenido a nuestro lugar de pruebas, actualmente nos encontramos trabajando con la tecnologia de
+                python para la integracion a la web, creeremos que es un buen camino ya que varios de mis proyectos que
+                deseo hacer seran echos en este lenguaje y quiero que se puedan ejecutar desde aqui sin necesidad de
+                descargar aplicaciones sino todo ya migrado a la web, disfruta tu estancia aqui</p>
+        </div>
+    </section>
+
+    <main class="content">
+        <div class="introduction-to-escalia">
+            <div class="into-title">
+                <h2>PRUEBA LOS PROYECTOS</h2>
+            </div>
+        </div>
+
+        <section>
+            <!-- VIDEO DOWNLOADER -->
+            <div class="project-container">
+                <div class="project-description">
+                    <h2>Descargador de Videos</h2>
+                    <p>Esta es nuestra aplicacion definitiva para descargar videos de Youtube y Youtube Music el cual
+                        permitira que tu puedas descargar contenido de ahi con la caidad que tu quieras y que no sea
+                        necesarion tener que instalar aplicaciones en windows y asi sera mas facil</p>
+                </div>
+                <div class="form-container">
+                    <form action="/download" method="post">
+                        <div>
+                            <label for="url_link">Inserta el link del Video:</label>
+                            <input type="text" name="url_link" id="url_link" required>
+                        </div>
+                        <div>
+                            <label for="video_quality">Calidad de Video:</label>
+                            <select name="video_quality">
+                                <option value="144p">144p</option>
+                                <option value="280p">280p</option>
+                                <option value="360p">360p</option>
+                                <option value="480p">480p</option>
+                                <option value="720p">720p</option>
+                                <option value="1080p">1080p (without audio)</option>
+                            </select>
+                        </div>
+
+                        <div class="proj-controls">
+                            <button type="submit" class="button">Descargar</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="proj-output">
+                    {% if result_download %}
+                    <p class="output">{{ result_download }}</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- CALCULATOR -->
+            <div class="project-container">
+                <div class="project-description">
+                    <h2>Calculadora de Python</h2>
+                    <p>Una calculadora multifuncional fue nuestro primer proyecto asi que este sera permanente por lo
+                        que la veras aqui por el resto de los siglos</p>
+                </div>
+                <div class="form-container">
+                    <form action="/calculate" method="POST">
+                        <div>
+                            <label for="number1">Numero 1:</label>
+                            <input type="text" name="number1" required>
+                        </div>
+                        <div>
+                            <label for="number2">Numero 2:</label>
+                            <input type="text" name="number2" required>
+                        </div>
+
+                        <label for="operation">Operacion :</label>
+                        <select name="operation">
+                            <option value="suma">Suma</option>
+                            <option value="resta">Resta</option>
+                            <option value="multiplicacion">Multiplicación</option>
+                            <option value="division">División</option>
+                        </select>
+
+                        <div class="proj-controls">
+                            <button type="submit" class="button">calcular</button>
+                        </div>
+                    </form>
+
+                    {% if result_equal %}
+                    <p class="output">{{ result_equal }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <!-- LABORATORY -->
+            <div class="project-container">
+                <div class="project-description">
+                    <h2>Espacio de laboratorio --- Solo acceso anticipado</h2>
+                    <p>Este espacio es para preubas de codigo, sin utilidad para el programa</p>
+                </div>
+                <div class="form-container">
+                    <form action="/laboratory" method="POST">
+                        <button type="submit" class="button">Probar</button>
+
+                        {% if output_laboratory %}
+                        <p class="output">{{ output_laboratory }}</p>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+
+            <!-- ENCRYPTION CALCULATOR -->
+            <div class="project-container">
+                <div class="project-description">
+                    <h2>Calculadora de encriptacion</h2>
+                    <p>Calculadora de encriptacion en cifrado asimetrico</p>
+                    <a href="/encription-calculator">
+                        <button class="button">ir</button>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="project-container">
+            <div class="project-description">   
+                <h2>Ejecucion de un metodo desde otro metodo</h2>
+                <p>U...</p>
+            </div>
+            <div class="form-container">
+                <!--
+                    <form action="/laboratory2" method="POST">
+                        <div>
+                            <label for="number1">Numero 1:</label>
+                            <input type="text" name="number1" required>
+                        </div>
+                        <div>
+                            <label for="number2">Numero 2:</label>
+                            <input type="text" name="number2" required>
+                        </div>
+
+                        <label for="operation">Operacion :</label>
+                        <select name="operation">
+                            <option value="suma">Suma</option>
+                            <option value="resta">Resta</option>
+                            <option value="multiplicacion">Multiplicación</option>
+                            <option value="division">División</option>
+                        </select>
+
+                        <div class="proj-controls">
+                            <button type="submit" class="button">calcular</button>
+                        </div>
+                    </form>
+                    -->
+
+                {% if result_equal %}
+                <p class="output">{{ result_equal }}</p>
+                {% endif %}
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="about-me">
+            <div class="media-links">
+                <div class="social-link">
+                    <a href="https://www.facebook.com/beofalejandro">
+                        <img src="../static/ESCALIA/footer/facebook-logo.svg" class="social-logo" alt=""></a>
+                </div>
+                <div class="social-link">
+                    <a href="https://www.instagram.com/beofalejandro/">
+                        <img src="../static/ESCALIA/footer/instagram-logo.svg" class="social-logo" alt=""></a>
+                </div>
+                <div class="social-link">
+                    <a href="https://open.spotify.com/playlist/3SdpLjljM8npoRd6Ret6Xr?si=04bb703b88604d10">
+                        <img src="../static/ESCALIA/footer/spotify-logo.svg" class="social-logo" alt=""></a>
+                </div>
+                <div class="social-link">
+                    <a href="https://github.com/beofalejandro/ESCALIA">
+                        <img src="../static/ESCALIA/footer/github-logo.svg" class="social-logo" alt=""></a>
+                </div>
+                <div class="social-link">
+                    <a href="https://www.linkedin.com/in/beofalejandro/">
+                        <img src="../static/ESCALIA/footer/linkedin-logo.svg" class="social-logo" alt=""></a>
+                </div>
+            </div>
+            <figure class="f-logo">
+                <a href="#">
+                    <img class="foot-logo" src="../static/ESCALIA/ESCALIALogo-white.svg" alt="ESCALIA Logo" />
+                </a>
+            </figure>
+        </div>
+        <div class="privacy-info">
+            <div class="rules">
+                <ul>
+                    <li>Politicas de Seguridad</li>
+                    <li>Condiciones de Uso</li>
+                    <li>Marcas Registradas</li>
+                </ul>
+            </div>
+            <div class="credits">
+                <p>&copy; ESCALIA 2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='../static/scripts/main.js') }}"></script>
+</body>
+
+</html>

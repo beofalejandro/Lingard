@@ -1,0 +1,22 @@
+body {
+  background: linear-gradient(320deg, #1e28b410, #770bbe10);
+}
+
+.main-title {
+  padding: 0 3%;
+  height: 100vh;
+  text-align: center;
+  align-content: center;
+}
+
+.main-title h1 {
+  font-size: 32px;
+  font-weight: lighter;
+}
+
+.body-title  {
+  padding: 2% 0;
+  text-align: center;
+  align-content: center;
+  background-color: #ffffff20;
+}

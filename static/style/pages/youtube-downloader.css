@@ -1,0 +1,63 @@
+.content-body {
+  border: 1px solid var(--light-background-color);
+  border-radius: 7px;
+}
+
+.content-body > h3 {
+  margin: 2% 0;
+  font-weight: lighter;
+  text-align: center;
+  font-size: 25px;
+  background: var(--dark-gradient-header-item);
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+.tutorial {
+  margin: 2% 0;
+}
+
+.tutorial h3 {
+  padding: 7px 0;
+  font-size: 20px;
+}
+
+form {
+  width: 65%;
+}
+
+.components {
+  margin: 2% 0;
+}
+
+input {
+  width: 300px;
+}
+
+.output {
+  width: 35%;
+}
+
+.program {
+  display: flex;
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 800px) {
+  .program {
+    display: inline;
+    align-content: center;
+    text-align: center;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .output {
+    width: 100%;
+  }
+}

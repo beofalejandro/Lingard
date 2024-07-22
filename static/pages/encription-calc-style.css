@@ -1,0 +1,47 @@
+body {
+  background: linear-gradient(200deg, #043294c7, #4c058fc7),
+    url(../static/index/index_bg.jpg);
+  height: 100vh;
+}
+
+.content {
+  position: absolute;
+  padding: 5% 3%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #151515;
+  border-radius: 5px;
+  border: 1.5px solid var(--light-emphasis);
+  z-index: 100;
+  text-align: center;
+}
+
+.description > h2 {
+  padding: 10px 0;
+}
+
+.formulary {
+  margin: 1% 0;
+  padding: 20px;
+}
+
+.formulary div {
+  justify-content: space-between;
+  display: flex;
+}
+
+.formulary input {
+  padding: 10px 15px;
+  background-color: transparent !important;
+  border: none;
+  border-bottom: 1px solid #ffffff56 !important;
+  color: #fff;
+}
+
+.output {
+  padding: 2%;
+  color: #fff;
+  transition: 1s linear;
+  animation: 1s alternate linear;
+}

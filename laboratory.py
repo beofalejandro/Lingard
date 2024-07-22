@@ -45,3 +45,80 @@ def laboratory_console():
 
         return task_message
     return text_console()
+
+def cifrar_cesar(mensaje, desplazamiento):
+  """
+  Cifra un mensaje usando el cifrado César.
+
+  Args:
+      mensaje: El mensaje a cifrar (cadena de texto).
+      desplazamiento: El desplazamiento numérico para el cifrado (entero).
+
+  Returns:
+      Mensaje cifrado (cadena de texto).
+  """
+  
+  alfabeto_mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  alfabeto_minusculas = "abcdefghijklmnopqrstuvwxyz"
+
+  mensaje_cifrado = ""
+
+  for caracter in mensaje:
+    if caracter.isspace():
+      mensaje_cifrado += caracter
+      continue
+
+    if caracter.isupper():
+      indice_original = alfabeto_mayusculas.index(caracter)
+      indice_cifrado = (indice_original + desplazamiento) % len(alfabeto_mayusculas)
+      mensaje_cifrado += alfabeto_mayusculas[indice_cifrado]
+    else:
+      indice_original = alfabeto_minusculas.index(caracter)
+      indice_cifrado = (indice_original + desplazamiento) % len(alfabeto_minusculas)
+      mensaje_cifrado += alfabeto_minusculas[indice_cifrado]
+
+  return mensaje_cifrado
+
+def descifrar_cesar(mensaje_cifrado, desplazamiento):
+  """
+  Descifra un mensaje cifrado con el cifrado César.
+
+  Args:
+      mensaje_cifrado: El mensaje cifrado a descifrar (cadena de texto).
+      desplazamiento: El desplazamiento numérico utilizado para el cifrado (entero).
+
+  Returns:
+      Mensaje original descifrado (cadena de texto).
+  """
+  
+  alfabeto_mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  alfabeto_minusculas = "abcdefghijklmnopqrstuvwxyz"
+
+  mensaje_descifrado = ""
+
+  for caracter in mensaje_cifrado:
+    if caracter.isspace():
+      mensaje_descifrado += caracter
+      continue
+
+    if caracter.isupper():
+      indice_cifrado = alfabeto_mayusculas.index(caracter)
+      indice_original = (indice_cifrado - desplazamiento) % len(alfabeto_mayusculas)
+      mensaje_descifrado += alfabeto_mayusculas[indice_original]
+    else:
+      indice_cifrado = alfabeto_minusculas.index(caracter)
+      indice_original = (indice_cifrado - desplazamiento) % len(alfabeto_minusculas)
+      mensaje_descifrado += alfabeto_minusculas[indice_original]
+
+  return mensaje_descifrado
+
+# Ejemplo de uso
+mensaje = "Hola mundo"
+desplazamiento = 3
+
+mensaje_cifrado = cifrar_cesar(mensaje, desplazamiento)
+print(f"Mensaje original: {mensaje}")
+print(f"Mensaje cifrado: {mensaje_cifrado}")
+
+mensaje_descifrado = descifrar_cesar(mensaje_cifrado, desplazamiento)
+print(f"Mensaje descifrado: {mensaje_descifrado}")

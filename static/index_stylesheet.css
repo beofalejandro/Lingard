@@ -1,6 +1,6 @@
 body {
-  background-image: linear-gradient(180deg, #000000a1, #000000a1 ),
-  url(../static/index/index_bg.jpg);
+  background-image: linear-gradient(180deg, #000000a1, #000000a1),
+    url(../static/index/index_bg.jpg);
   background-position: center;
   background-color: #212121;
   color: #fff;
@@ -11,7 +11,7 @@ body {
 }
 
 .header-link:hover {
-  color: #EE2E31;
+  color: #ee2e31;
 }
 
 .content {
@@ -20,8 +20,14 @@ body {
   padding: 15px 0;
 }
 
+.content > section {
+  display: flex;
+  gap: 10px;
+}
+
 .index_welcome {
-  height: 600px;
+  display: none;
+  height: 700px;
 }
 
 .i_w_container {
@@ -38,52 +44,36 @@ body {
 .introduction-to-escalia {
   margin: 2%;
   padding: 1%;
-  display: flex;
   gap: 10px;
 }
 
 .into-title {
-  width: 60%;
   font-size: 28px;
   text-align: center;
   align-content: center;
-  background: linear-gradient(120deg, #e979ff, rgb(117, 228, 195));
-  background-size: 700px 100px;
+  background: linear-gradient(120deg, #8702af, rgb(0, 10, 148));
+  background-size: 2000px 100px;
   background-clip: inherit;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.into-description {
-  width: 40%;
-  padding: 6% 0;
-  background-image: url(../static/ESCALIA/ESCALIALogoCA-index.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-size: 600px 300px;
-}
-
 .project-container {
-  margin: 30px;
+  width: 50%;
+  margin: 20px;
   padding: 2%;
   border-radius: 7px;
-  background-color: #1B2A41;
-  color: #FFF;
-  border: 1px solid #F2BEFC;
+  background-color: #1b2a41;
+  color: #fff;
+  border: 1px solid #f2befc;
 }
 
-.project-content {
-  display: flex;
-  gap: 5px;
-}
-
-.project-content h2{
+.project-content h2 {
   padding-bottom: 10px;
 }
 
 .project-description {
   padding: 20px 0;
-  width: 50%;
   align-items: center;
   justify-content: center;
 }
@@ -94,14 +84,13 @@ body {
   padding: 1%;
   background-color: #151515;
   border-radius: 7px;
-  width: 50%;
 }
 
 .form-container form {
   justify-content: center;
 }
 
-.form-container label{
+.form-container label {
   color: #fff;
 }
 
@@ -146,7 +135,7 @@ form > div {
   .into-title {
     width: 100%;
   }
-  
+
   .into-description {
     width: 100%;
   }
@@ -159,7 +148,7 @@ form > div {
   .project-description {
     width: 100%;
   }
-  
+
   .form-container {
     width: 100%;
   }

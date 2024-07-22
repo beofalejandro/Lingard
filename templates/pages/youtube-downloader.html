@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=" {{url_for('static', filename='style/pages/index.css')}} " />
+    <link rel="stylesheet" href=" {{url_for('static', filename='style/pages/youtube-downloader.css')}} " />
     <link rel="stylesheet" href=" {{url_for('static', filename='style/template.css')}} " />
     <title>Document</title>
 </head>
@@ -13,15 +13,17 @@
     <header class="sidebar">
         <ul class="sidebar-list">
             <li class="sidebar-item">
-                <a href="#"><button class="sidebar-menu-link active" disabled>Principal</button></a>
+                <a href="#"><button class="sidebar-menu-link" disabled>Principal</button></a>
+                <!--
                 <ul class="sidebar-list">
-                    <li class="sub-sidebar-item"><a href=""><button class="sidebar-menu-link active"
+                    <li class="sub-sidebar-item"><a href=""><button class="sidebar-menu-link"
                                 disabled>Bienvenida</button></a>
                     </li>
                 </ul>
+                 -->
             </li>
             <li class="sidebar-item">
-                <a href="/youtube-downloader"><button class="sidebar-menu-link">Youtube Downloader</button></a>
+                <a href="/youtube-downloader"><button class="sidebar-menu-link active">Youtube Downloader</button></a>
             </li>
             <li class="sidebar-item">
                 <a href="#"><button class="sidebar-menu-link">Redes</button></a>
@@ -37,17 +39,61 @@
             </li>
         </ul>
     </header>
-    <main class="content">
-        <section class="main-title">
-            <h1>Bienvenido a la nueva interfaz de proyectos de Python con Flask</h1>
-            <br>
-            <p>Estamos trabajando para que puedas ver cada proyecto de un forma diferente</p>
-        </section>
 
-        <section class="body-title">
-            <p>Puedes ver los nuevos proyectos en la parte lateral y navegar por ellos, diviertete</p>
-            <br>
-            <h2>Instalacion</h2>
+    <main class="content">
+        <section class="content-header">
+            <h2>Python Downloader</h2>
+        </section>
+        <section class="content-body">
+            <h3>Nuestra aplicacion para descargar videos de youtube de forma gratuita, no es legal el uso de esta
+                aplicacion, solo para fines educativos</h3>
+
+            <p>Tu tambien puedes hacer este proyecto facil y rapido y personalizarlo como tu quieras, puedes ver el
+                tutorial para recrear paso a paso o solo descargar el codigo de mi repositorio, este es muy simple
+                asi que puede tener muchos cambios ❤️</p>
+
+            <div class="tutorial">
+                <h3>Requisitos:</h3>
+                <ul>
+                    <li>- Python 3.7 o Superio</li>
+                    <li>- Editor de Codigo</li>
+                    <li>- Conexion a Internet</li>
+                </ul>
+                <h3>Tutorial:</h3>
+                <button class="submit">Ver Tutorial</button>
+                <button class="submit">Ver Codigo</button>
+            </div>
+
+            <div class="program">
+                <!-- FUCTION -->
+                <form action="/youtube-download" method="post">
+                    <h3>Datos de Descarga:</h3>
+                    <div class="components">
+                        <label for="url_link">Link del Video:</label>
+                        <input type="text" name="url_link" id="url_link" required>
+
+                        <label for="video_quality">Calidad de Video:</label>
+                        <select name="video_quality">
+                            <option value="144p">144p</option>
+                            <option value="280p">280p</option>
+                            <option value="360p">360p</option>
+                            <option value="480p">480p</option>
+                            <option value="720p">720p</option>
+                            <option value="1080p">1080p (without audio)</option>
+                        </select>
+                    </div>
+                    <div class="controls">
+                        <button type="submit" class="submit">Descargar video</button>
+                    </div>
+                </form>
+                <!-- OUTPUT -->
+                <div class="output">
+                    <h3>Estatus del video:</h3>
+                    {% if result_download %}
+                    <p class="text-output">{{ result_download }}</p>
+                    {% endif %}
+                </div>
+            </div>
         </section>
 
         <footer id="footer">
