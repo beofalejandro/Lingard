@@ -42,7 +42,7 @@
 
     <main class="content">
         <section class="content-header">
-            <h2>Python Downloader</h2>
+            <h2>Python Video Downloader</h2>
         </section>
         <section class="content-body">
             <h3>Nuestra aplicacion para descargar videos de youtube de forma gratuita, no es legal el uso de esta
@@ -66,11 +66,11 @@
 
             <div class="program">
                 <!-- FUCTION -->
-                <form action="/youtube-download" method="post">
+                <form action="/videodownload" method="POST">
                     <h3>Datos de Descarga:</h3>
                     <div class="components">
                         <label for="url_link">Link del Video:</label>
-                        <input type="text" name="url_link" id="url_link" required>
+                        <input type="text" name="url_link" required>
 
                         <label for="video_quality">Calidad de Video:</label>
                         <select name="video_quality">
@@ -89,8 +89,8 @@
                 <!-- OUTPUT -->
                 <div class="output">
                     <h3>Estatus del video:</h3>
-                    {% if result_download %}
-                    <p class="text-output">{{ result_download }}</p>
+                    {% if download_status %}
+                    <p class="text-output">{{ download_status }}</p>
                     {% endif %}
                 </div>
             </div>

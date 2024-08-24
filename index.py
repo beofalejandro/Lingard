@@ -11,7 +11,7 @@ app = fk(__name__)
 @app.route('/')
 # Insert content to index
 def index():
-    return rt('index.html')
+    return rt('indexsu.html')
 
 @app.route('/about')
 def about():
@@ -23,7 +23,6 @@ def encription_calculator():
 
 
 # Methods for index page
-# DOWNLOADER
 @app.route('/download', methods=['POST'])
 def dowloader():
     # get the video link and the quality for this 
@@ -40,9 +39,9 @@ def dowloader():
         stream.download(output_path='Downloads')
 
         # return in the document
-        return rt('index.html', result_download = 'Descargado Satisfactoriamente')
+        return rt('indexsu.html', result_download = 'Descargado Satisfactoriamente')
     except Exception as e:
-        return rt('index.html', result_download = 'Hubo un error en la descarga del video')
+        return rt('indexsu.html', result_download = 'Hubo un error en la descarga del video')
 
 # CALCULATOR
 @app.route('/calculate', methods=['POST'])
